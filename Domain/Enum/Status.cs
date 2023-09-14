@@ -9,9 +9,9 @@ namespace Domain.Enum
 {
     public enum Status
     {
-        Active,
-        Modified,
-        Passive
+        Active=1,
+        Modified=2,
+        Passive=3
 
     }
 }
