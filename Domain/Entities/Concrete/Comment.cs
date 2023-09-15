@@ -16,9 +16,9 @@ namespace Domain.Entities.Concrete
         public DateTime? CreateDate { get; set; }
         public DateTime? UpdateDate { get; set; }
         public DateTime? DeleteDate { get; set; }
-        public int AppUserID { get; set; }
+        public int? AppUserID { get; set; }
         public AppUser? AppUser { get; set; }
-        public int PostID { get; set; }
+        public int? PostID { get; set; }
         public Post? Post { get; set; }
     }
 }

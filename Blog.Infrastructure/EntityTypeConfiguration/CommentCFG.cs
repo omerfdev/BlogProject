@@ -13,7 +13,8 @@ namespace Blog.Infrastructure.EntityTypeConfiguration
     {
         public override void Configure(EntityTypeBuilder<Comment> builder)
         {
-
+            builder.Property(x=>x.Content).HasMaxLength(250).HasColumnType("varchar");
+            base.Configure(builder);
         }
     }
 }

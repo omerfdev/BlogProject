@@ -18,6 +18,10 @@ namespace Blog.Infrastructure.Context
 {
     public class BlogContext : IdentityDbContext<AppUser, AppRole, int>
     {
+        public BlogContext()
+        {
+            
+        }
         public BlogContext(DbContextOptions<BlogContext> options) : base(options)
         {
 
@@ -34,18 +38,24 @@ namespace Blog.Infrastructure.Context
             builder.ApplyConfiguration<AppRole>(new AppRoleCFG());
             builder.ApplyConfiguration<AppUser>(new AppUserCFG());
             builder.ApplyConfiguration<Genre>(new GenreCFG());
-            builder.ApplyConfiguration<Comment>(new CommentCFG());
-            builder.ApplyConfiguration<Like>(new LikeCFG());
             builder.ApplyConfiguration<Post>(new PostCFG());
+            builder.ApplyConfiguration<Comment>(new CommentCFG());          
+            builder.ApplyConfiguration<Like>(new LikeCFG());
+            //Admin Role.
+            //this.UserRoles.Add(new IdentityUserRole<int> { RoleId=1,UserId=1});
 
-            this.UserRoles.Add(new IdentityUserRole<int> { RoleId=1,UserId=1});
+            builder.Entity<IdentityUserRole<int>>().HasData(
+                new IdentityUserRole<int> {
+                    RoleId=1,UserId=1 
+                });
             base.OnModelCreating(builder);
         }
-        public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<AppRole> AppRoles { get; set; }
-        public DbSet<Comment> Comments { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<Genre> Genres { get; set; }
-        public DbSet<Like> Likes { get; set; }
+        public DbSet<Comment> Comments { get; set; }
         public DbSet<Post> Posts { get; set; }
+        public DbSet<Like> Likes { get; set; }
+     
     }
 }

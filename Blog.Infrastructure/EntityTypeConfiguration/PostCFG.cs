@@ -13,7 +13,9 @@ namespace Blog.Infrastructure.EntityTypeConfiguration
     {
         public override void Configure(EntityTypeBuilder<Post> builder)
         {
-            
+            builder.Property(x=>x.Title).HasMaxLength(130).IsRequired().HasColumnType("varchar");
+            builder.Property(x=>x.Content).HasMaxLength(130).IsRequired().HasColumnType("varchar");
+            builder.Property(x=>x.ImagePath).HasMaxLength(130).HasColumnType("varchar").IsRequired(false);
           base.Configure(builder);
         }
     }

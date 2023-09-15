@@ -16,8 +16,8 @@ namespace Blog.Infrastructure.EntityTypeConfiguration
         public virtual void Configure(EntityTypeBuilder<T> builder)
         {
             builder.Property(x => x.CreateDate).IsRequired().HasDefaultValue(DateTime.Now);  
-            builder.Property(x => x.UpdateDate).IsRequired();  
-            builder.Property(x => x.DeleteDate).IsRequired();  
+            builder.Property(x => x.UpdateDate).IsRequired().HasDefaultValue(DateTime.Now);
+            builder.Property(x => x.DeleteDate).IsRequired().HasDefaultValue(DateTime.Now);
             builder.Property(x => x.Status).IsRequired().HasDefaultValue(Status.Active);  
 
            

@@ -13,6 +13,7 @@ namespace Blog.Infrastructure.EntityTypeConfiguration
     {
         public override void Configure(EntityTypeBuilder<Like> builder)
         {
+            builder.Property(x => x.ID).IsRequired();
             base.Configure(builder);
         }
     }

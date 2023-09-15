@@ -13,11 +13,14 @@ namespace Blog.Infrastructure.EntityTypeConfiguration
     {
         public override void Configure(EntityTypeBuilder<AppRole> builder)
         {
-            
+
             builder.HasData(
-                 new AppRole { Id = 1, Name = "Admin" },
+                 new AppRole { Id = 1, Name = "Admin"},
                  new AppRole { Id = 2, Name = "User" }
-             );
+             ); ;
+            builder.Property(x=>x.Name).HasColumnType("varchar").HasMaxLength(25);
+           
+
             base.Configure(builder);
         }
     }

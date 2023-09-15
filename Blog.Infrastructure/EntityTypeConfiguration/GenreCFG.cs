@@ -18,6 +18,7 @@ namespace Blog.Infrastructure.EntityTypeConfiguration
                new Genre { ID = 2, Name = "Software" },
                new Genre { ID = 3, Name = "Sports" }
            );
+            builder.Property(x => x.Name).HasMaxLength(25).IsRequired().HasColumnType("varchar");
             base.Configure( builder );  
         }
     }
