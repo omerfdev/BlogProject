@@ -9,10 +9,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Blog.Infrastructure.Migrations
+namespace Blog_InfrastructureLayer.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    [Migration("20230915080043_init")]
+    [Migration("20230919105117_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -40,13 +40,13 @@ namespace Blog.Infrastructure.Migrations
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 9, 15, 11, 0, 43, 33, DateTimeKind.Local).AddTicks(9082));
+                        .HasDefaultValue(new DateTime(2023, 9, 19, 13, 51, 17, 562, DateTimeKind.Local).AddTicks(8638));
 
                     b.Property<DateTime?>("DeleteDate")
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 9, 15, 11, 0, 43, 33, DateTimeKind.Local).AddTicks(9451));
+                        .HasDefaultValue(new DateTime(2023, 9, 19, 13, 51, 17, 562, DateTimeKind.Local).AddTicks(9033));
 
                     b.Property<string>("Name")
                         .HasMaxLength(256)
@@ -65,7 +65,7 @@ namespace Blog.Infrastructure.Migrations
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 9, 15, 11, 0, 43, 33, DateTimeKind.Local).AddTicks(9300));
+                        .HasDefaultValue(new DateTime(2023, 9, 19, 13, 51, 17, 562, DateTimeKind.Local).AddTicks(8879));
 
                     b.HasKey("Id");
 
@@ -80,14 +80,14 @@ namespace Blog.Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            ConcurrencyStamp = "90d2dc6d-a12c-4087-bd50-9eaf1847fa9d",
+                            ConcurrencyStamp = "5ce64ede-d6f6-41fc-967b-c52eb805898d",
                             Name = "Admin",
                             Status = 0
                         },
                         new
                         {
                             Id = 2,
-                            ConcurrencyStamp = "d9428faa-27e2-4eb7-8af3-01f085cc97ca",
+                            ConcurrencyStamp = "cff40793-c8b7-4bfc-96e0-46a2333e4d5c",
                             Name = "User",
                             Status = 0
                         });
@@ -112,13 +112,13 @@ namespace Blog.Infrastructure.Migrations
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(3013));
+                        .HasDefaultValue(new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(4482));
 
                     b.Property<DateTime?>("DeleteDate")
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(3383));
+                        .HasDefaultValue(new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(5114));
 
                     b.Property<string>("Email")
                         .HasMaxLength(256)
@@ -181,7 +181,7 @@ namespace Blog.Infrastructure.Migrations
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(3214));
+                        .HasDefaultValue(new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(4912));
 
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
@@ -204,7 +204,7 @@ namespace Blog.Infrastructure.Migrations
                         {
                             Id = 1,
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "7d1b96d8-eb64-42f7-b234-0be83e3fd387",
+                            ConcurrencyStamp = "859fc9e4-e832-4bf6-898c-f2239f6a3b94",
                             Email = "root@admin.com",
                             EmailConfirmed = false,
                             FirstName = "root",
@@ -212,6 +212,7 @@ namespace Blog.Infrastructure.Migrations
                             LockoutEnabled = false,
                             PhoneNumber = "1234567890",
                             PhoneNumberConfirmed = false,
+                            SecurityStamp = "074e8653-6ed1-40d6-ac8f-53aadebc2234",
                             Status = 0,
                             TwoFactorEnabled = false,
                             UserName = "root@admin.com"
@@ -238,13 +239,13 @@ namespace Blog.Infrastructure.Migrations
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(5250));
+                        .HasDefaultValue(new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(7529));
 
                     b.Property<DateTime?>("DeleteDate")
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(5500));
+                        .HasDefaultValue(new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(7804));
 
                     b.Property<int?>("PostID")
                         .HasColumnType("int");
@@ -258,7 +259,7 @@ namespace Blog.Infrastructure.Migrations
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(5380));
+                        .HasDefaultValue(new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(7676));
 
                     b.HasKey("ID");
 
@@ -281,13 +282,13 @@ namespace Blog.Infrastructure.Migrations
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(3786));
+                        .HasDefaultValue(new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(5629));
 
                     b.Property<DateTime?>("DeleteDate")
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(4024));
+                        .HasDefaultValue(new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(5876));
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -303,7 +304,7 @@ namespace Blog.Infrastructure.Migrations
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(3909));
+                        .HasDefaultValue(new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(5760));
 
                     b.HasKey("ID");
 
@@ -345,13 +346,13 @@ namespace Blog.Infrastructure.Migrations
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(5822));
+                        .HasDefaultValue(new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(8160));
 
                     b.Property<DateTime?>("DeleteDate")
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(6072));
+                        .HasDefaultValue(new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(8427));
 
                     b.Property<int?>("PostID")
                         .HasColumnType("int");
@@ -365,7 +366,7 @@ namespace Blog.Infrastructure.Migrations
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(5951));
+                        .HasDefaultValue(new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(8297));
 
                     b.HasKey("ID");
 
@@ -396,13 +397,13 @@ namespace Blog.Infrastructure.Migrations
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(4552));
+                        .HasDefaultValue(new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(6701));
 
                     b.Property<DateTime?>("DeleteDate")
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(4838));
+                        .HasDefaultValue(new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(7068));
 
                     b.Property<int>("GenreID")
                         .HasColumnType("int");
@@ -425,7 +426,7 @@ namespace Blog.Infrastructure.Migrations
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(4709));
+                        .HasDefaultValue(new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(6883));
 
                     b.HasKey("ID");
 

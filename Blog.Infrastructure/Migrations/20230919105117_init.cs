@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Blog.Infrastructure.Migrations
+namespace Blog_InfrastructureLayer.Migrations
 {
     public partial class init : Migration
     {
@@ -16,9 +16,9 @@ namespace Blog.Infrastructure.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Status = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 15, 11, 0, 43, 33, DateTimeKind.Local).AddTicks(9082)),
-                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 15, 11, 0, 43, 33, DateTimeKind.Local).AddTicks(9300)),
-                    DeleteDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 15, 11, 0, 43, 33, DateTimeKind.Local).AddTicks(9451)),
+                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 19, 13, 51, 17, 562, DateTimeKind.Local).AddTicks(8638)),
+                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 19, 13, 51, 17, 562, DateTimeKind.Local).AddTicks(8879)),
+                    DeleteDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 19, 13, 51, 17, 562, DateTimeKind.Local).AddTicks(9033)),
                     Name = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true),
                     NormalizedName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     ConcurrencyStamp = table.Column<string>(type: "nvarchar(max)", nullable: true)
@@ -38,9 +38,9 @@ namespace Blog.Infrastructure.Migrations
                     LastName = table.Column<string>(type: "varchar(25)", maxLength: 25, nullable: false),
                     ImagePath = table.Column<string>(type: "varchar(130)", maxLength: 130, nullable: true),
                     Status = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(3013)),
-                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(3214)),
-                    DeleteDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(3383)),
+                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(4482)),
+                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(4912)),
+                    DeleteDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(5114)),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -69,9 +69,9 @@ namespace Blog.Infrastructure.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "varchar(25)", maxLength: 25, nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(3786)),
-                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(3909)),
-                    DeleteDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(4024))
+                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(5629)),
+                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(5760)),
+                    DeleteDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(5876))
                 },
                 constraints: table =>
                 {
@@ -194,9 +194,9 @@ namespace Blog.Infrastructure.Migrations
                     Content = table.Column<string>(type: "varchar(130)", maxLength: 130, nullable: false),
                     ImagePath = table.Column<string>(type: "varchar(130)", maxLength: 130, nullable: true),
                     Status = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(4552)),
-                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(4709)),
-                    DeleteDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(4838)),
+                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(6701)),
+                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(6883)),
+                    DeleteDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(7068)),
                     GenreID = table.Column<int>(type: "int", nullable: false),
                     AppUserID = table.Column<int>(type: "int", nullable: false)
                 },
@@ -225,9 +225,9 @@ namespace Blog.Infrastructure.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Content = table.Column<string>(type: "varchar(250)", maxLength: 250, nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(5250)),
-                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(5380)),
-                    DeleteDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(5500)),
+                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(7529)),
+                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(7676)),
+                    DeleteDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(7804)),
                     AppUserID = table.Column<int>(type: "int", nullable: true),
                     PostID = table.Column<int>(type: "int", nullable: true)
                 },
@@ -253,9 +253,9 @@ namespace Blog.Infrastructure.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Status = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(5822)),
-                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(5951)),
-                    DeleteDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 15, 11, 0, 43, 35, DateTimeKind.Local).AddTicks(6072)),
+                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(8160)),
+                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(8297)),
+                    DeleteDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 9, 19, 13, 51, 17, 564, DateTimeKind.Local).AddTicks(8427)),
                     AppUserID = table.Column<int>(type: "int", nullable: true),
                     PostID = table.Column<int>(type: "int", nullable: true)
                 },
@@ -279,14 +279,14 @@ namespace Blog.Infrastructure.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { 1, "90d2dc6d-a12c-4087-bd50-9eaf1847fa9d", "Admin", null },
-                    { 2, "d9428faa-27e2-4eb7-8af3-01f085cc97ca", "User", null }
+                    { 1, "5ce64ede-d6f6-41fc-967b-c52eb805898d", "Admin", null },
+                    { 2, "cff40793-c8b7-4bfc-96e0-46a2333e4d5c", "User", null }
                 });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "ImagePath", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { 1, 0, "7d1b96d8-eb64-42f7-b234-0be83e3fd387", "root@admin.com", false, "root", null, "Admin", false, null, null, null, null, "1234567890", false, null, false, "root@admin.com" });
+                values: new object[] { 1, 0, "859fc9e4-e832-4bf6-898c-f2239f6a3b94", "root@admin.com", false, "root", null, "Admin", false, null, null, null, null, "1234567890", false, "074e8653-6ed1-40d6-ac8f-53aadebc2234", false, "root@admin.com" });
 
             migrationBuilder.InsertData(
                 table: "Genres",

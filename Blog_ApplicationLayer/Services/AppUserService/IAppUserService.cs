@@ -12,6 +12,6 @@ namespace Blog_ApplicationLayer.Services.AppUserService
     {
          Task<SignInResult> LoginAsync(LoginDto login);
         Task<IdentityResult> RegisterAsync(RegisterDto register);
-        void Logout();
+        Task Logout();
     }
 }

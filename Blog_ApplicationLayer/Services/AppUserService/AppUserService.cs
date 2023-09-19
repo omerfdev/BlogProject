@@ -27,14 +27,32 @@ namespace Blog_ApplicationLayer.Services.AppUserService
            return await _signInManager.PasswordSignInAsync(user, login.Password,false,false);        
         }
 
-        public void Logout()
+        public async Task Logout()
         {
-            throw new NotImplementedException();
+          await  _signInManager.SignOutAsync();
         }
 
-        public Task<IdentityResult> RegisterAsync(RegisterDto register)
+        public async Task<IdentityResult> RegisterAsync(RegisterDto register)
         {
-            throw new NotImplementedException();
+            AppUser user = new AppUser();
+            user.FirstName = register.FirstName;
+            user.LastName = register.LastName;
+            user.Email = register.Email;
+            user.UserName = register.Email;
+            user.ImagePath = register.ImagePath;
+
+            //user.PasswordHash = new PasswordHasher<AppUser>().HashPassword(user,register.Password);
+
+            var result = await _userManager.CreateAsync(user, register.Password);
+
+            if (result.Succeeded)
+            {
+                await _signInManager.SignInAsync(user, false);
+                //Add a  Role for the user...(USER)
+                await _userManager.AddToRoleAsync(user, "User");
+            }
+            return result;
         }
+
     }
 }

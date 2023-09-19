@@ -28,6 +28,7 @@ namespace Blog.Infrastructure.EntityTypeConfiguration
                 Email = "root@admin.com",
                 UserName = "root@admin.com",
                 PhoneNumber = "1234567890", 
+                SecurityStamp = Guid.NewGuid().ToString(),
             };
             hash.HashPassword(root, "Root_123");
             builder.HasData(root);

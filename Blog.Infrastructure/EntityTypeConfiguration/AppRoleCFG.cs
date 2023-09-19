@@ -15,8 +15,8 @@ namespace Blog.Infrastructure.EntityTypeConfiguration
         {
 
             builder.HasData(
-                 new AppRole { Id = 1, Name = "Admin"},
-                 new AppRole { Id = 2, Name = "User" }
+                 new AppRole { Id = 1, Name = "Admin",NormalizedName="ADMIN"},
+                 new AppRole { Id = 2, Name = "User",NormalizedName = "USER" }
              ); ;
             builder.Property(x=>x.Name).HasColumnType("varchar").HasMaxLength(25);
            
