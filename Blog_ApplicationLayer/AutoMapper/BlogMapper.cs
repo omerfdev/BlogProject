@@ -23,6 +23,8 @@ namespace Blog_ApplicationLayer.AutoMapper
                 ForMember(x => x.ResimYolu, x => x.MapFrom(y => y.ImagePath)).
                 ForMember(x => x.KullaniciAdi, x => x.MapFrom(y => y.Email)).
                 ForMember(x => x.Sifre, x => x.MapFrom(y => y.PasswordHash)).ReverseMap();
+            CreateMap<Post, CreatePostDto>().ReverseMap();
+            CreateMap<Genre, GenreDto>().ReverseMap();
         }
     }
 }

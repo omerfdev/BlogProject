@@ -63,7 +63,6 @@ namespace Blog_ApplicationLayer.Services.AppUserService
             //user.FirstName = register.Firstname;
             //user.LastName = register.Lastname;
             //user.Email = register.Email;
-
             //user.ImagePath = register.ImagePath;
             _mapper.Map(register, user);
             user.UserName = register.Eposta;

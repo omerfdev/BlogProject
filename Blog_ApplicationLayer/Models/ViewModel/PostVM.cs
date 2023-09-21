@@ -19,7 +19,10 @@ namespace Blog_ApplicationLayer.Models.ViewModel
         public string UserName { get; set; }
         public DateTime CreateDate { get; set; }
 
-        public List<Like> Likes { get; set; }
-        public List<Comment> Comments { get; set; }
+        //Eklenecek ???
+        //LikeVM, CommentVM...!!!
+        //Tekilse Doldur, Çoğulsa doldurma....(Likes,Comments)
+        public List<Like>? Likes { get; set; }
+        public List<Comment>? Comments { get; set; }
     }
 }

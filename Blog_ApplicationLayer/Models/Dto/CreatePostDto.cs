@@ -13,6 +13,7 @@ namespace Blog_ApplicationLayer.Models.Dto
         public string? ImagePath { get; set; }
         public int GenreId { get; set; }
         public int AppUserId { get; set; }
-        List<GenreDTO>? Genres { get; set; }
+
+        public ICollection<GenreDto>? Genres { get; set; }
     }
 }
