@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Blog_ApplicationLayer.Models.Dto;
+using Blog_ApplicationLayer.Models.ViewModel;
 using Domain.Entities.Concrete;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
@@ -25,6 +26,9 @@ namespace Blog_ApplicationLayer.AutoMapper
                 ForMember(x => x.Sifre, x => x.MapFrom(y => y.PasswordHash)).ReverseMap();
             CreateMap<Post, CreatePostDto>().ReverseMap();
             CreateMap<Genre, GenreDto>().ReverseMap();
+
+            CreateMap<Post,PostVM>().ForMember(x=>x.UserName,x=>x.MapFrom(y=>y.AppUser.UserName)).ReverseMap();
+            CreateMap<Post,PostVM>().ForMember(x=>x.GenreName,x=>x.MapFrom(y=>y.Genres.Name)).ReverseMap();
         }
     }
 }

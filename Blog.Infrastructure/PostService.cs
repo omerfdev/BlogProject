@@ -46,9 +46,9 @@ namespace Blog_ApplicationLayer.Services.PostService
         }
 
 
-        public async Task DeletePostAsync(int postId)
+        public Task DeletePostAsync(int postId)
         {
-            var post=await _postRepository.GetFirstOrDefaultAsync(x=>x.ID==postId);
+            throw new NotImplementedException();
         }
 
         public async Task<List<PostVM>> GetAllPostsAsync()

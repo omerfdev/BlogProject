@@ -1,0 +1,33 @@
+﻿@using Blog_ApplicationLayer.Models.ViewModel;
+@using Domain.Entities.Concrete;
+@using Microsoft.AspNetCore.Identity;
+@model IEnumerable<PostVM> //EN YÜKSEK SEVİYEDE KOLEKSİYON YAKALAR ICOLLECTION STRING DİZİ GÖNDERİRSEN ÇALIŞMAZ.
+@inject SignInManager<AppUser> _signInManager
+
+@{
+    var isSignedIn = _signInManager.IsSignedIn(User);
+    var isAdmin = User.IsInRole("Admin");
+    var userName = User.Identity.Name;
+}
+
+<table class="table table-striped">
+    @foreach(var post in Model)
+    {
+        <tr>
+            <td>@post.Title</td>
+            <td>@post.CreateDate</td>
+            <td>@post.UserName</td>
+            <td>
+                @if(isSignedIn && post.UserName == userName)
+                {
+                    <a class="btn btn-outline-secondary">Update</a>
+                }
+                @if (isSignedIn && isAdmin)
+                {
+                    <a class="btn btn-outline-secondary">Delete</a>
+                }
+            </td>
+        </tr>
+        
+    }
+</table>

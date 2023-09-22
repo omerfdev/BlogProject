@@ -23,12 +23,15 @@ namespace Blog.Infrastructure.Repositories
         }
         public async Task AddAsync(T entity)
         {
+            entity.CreateDate = DateTime.Now;   
             await _table.AddAsync(entity);
             await _context.SaveChangesAsync();
         }
         public async Task DeleteAsync(T entity)
         {
-            //status passive olacak
+            _context.Entry<T>(entity).State = EntityState.Modified;
+            entity.DeleteDate = DateTime.Now;
+            entity.Status = Domain.Enum.Status.Passive;
             await _context.SaveChangesAsync();
         }
         public async Task<int> Update(T entity)
