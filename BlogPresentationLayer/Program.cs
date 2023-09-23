@@ -24,6 +24,16 @@ builder.Services.AddControllersWithViews();
 //AUTOMAPPER AYAR
 builder.Services.AddAutoMapper(x=>x.AddProfile(typeof(BlogMapper)));
 
+//AutoFac için gereklidir.IoC
+/*
+ builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+builder.Host.ConfigureContainer<ContainerBuilder>(builder=>{
+builder.RegisterModule(new DependencyResolver());
+});
+ 
+ 
+ */
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

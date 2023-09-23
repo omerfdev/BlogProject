@@ -1,0 +1,37 @@
+﻿@using Blog_ApplicationLayer.Models.Dto;
+
+@model RegisterDto
+
+<form method="post">
+    <table>
+        <tr>
+            <td><label asp-for="Firstname"></label> </td>
+            <td><input type="text" asp-for="Firstname" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Lastname"></label> </td>
+            <td><input type="text" asp-for="Lastname" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Email"></label> </td>
+            <td><input type="email" asp-for="Email" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Password"></label> </td>
+            <td><input type="password" asp-for="Password" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="ConfirmPassword"></label> </td>
+            <td><input type="password" asp-for="ConfirmPassword" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="ImagePath"></label> </td>
+            <td><input type="hidden" asp-for="ImagePath" value="empty.jpg" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Add a new user" />
+            </td>
+        </tr>
+    </table>
+</form>

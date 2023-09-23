@@ -9,6 +9,14 @@
     var isAdmin = User.IsInRole("Admin");
     var userName = User.Identity.Name;
 }
+<script>
+
+    function areUSure()
+    {
+       return confirm("Silinsin mi?");
+    }
+
+</script>
 
 <table class="table table-striped">
     @foreach(var post in Model)
@@ -24,7 +32,7 @@
                 }
                 @if (isSignedIn && isAdmin)
                 {
-                    <a class="btn btn-outline-secondary">Delete</a>
+                    <a class="btn btn-outline-secondary" asp-controller="Panel" asp-action="DeletePost" asp-area="AdminPanel" asp-route-id="@post.Id" onclick="return areUSure()"> Delete</a>
                 }
             </td>
         </tr>
